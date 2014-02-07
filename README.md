@@ -173,34 +173,37 @@ f) then from a Windows command prompt:
 
 IF THIS STEP FAILS, REPEAT STEP 1.5!
 
-4. Compiling Qt 5.2.0 libraries and AmKoin-Qt
-
+4. Compiling Qt 5.2.0 libraries and AmKoin-Qt 
+--------------
 4.1 Download and unpack Qt base and tools sources:
 
 a) http://download.qt-project.org/official_releases/qt/5.2/5.2.0/submodules/qtbase-opensource-src-5.2.0.7z
+* Make a directory called C:\Qt
+* Unpack the contents of the file into C:\Qt
+* Rename the directory from qtbase-opensource-src-5.2.0 to 5.2.0
 
-Make a directory called C:\Qt
-Unpack the contents of the file into C:\Qt
-Rename the directory from qtbase-opensource-src-5.2.0 to 5.2.0
 b) http://download.qt-project.org/official_releases/qt/5.2/5.2.0/submodules/qttools-opensource-src-5.2.0.7z
+* Unpack the contents of the file into C:\Qt
 
-Unpack the contents of the file into C:\Qt
 c) Open a command prompt and type:
 
-cd\deps\qtbase-opensource-src-5.2.0
+	cd\deps\qtbase-opensource-src-5.2.0
 
-configure.bat -release -opensource -confirm-license -static -make libs -no-sql-sqlite -no-opengl -qt-zlib -qt-pcre -no-icu -no-gif -qt-libpng -qt-libjpeg -no-angle -no-vcproj -no-openssl -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug
+	configure.bat -release -opensource -confirm-license -static -make libs -no-sql-sqlite -no-opengl -qt-zlib -qt-pcre -no-icu -no-gif -qt-libpng -qt-libjpeg -no-angle -no-vcproj -no-openssl -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug
 
-mingw32-make
-e) Remember when we had to check the Path variable before? We need to do that again. Reference the instructions above on how to access it. Add the following path to the beginning:
+	mingw32-make
 
-C:\Qt\5.2.0\bin;
+e) Remember when we had to check the Path variable before?  We need to do that again.  Reference the instructions above on how to access it.  Add the following path to the beginning:
+
+	C:\Qt\5.2.0\bin;
+
 f) close and reopen the command prompt window so the new path will take effect.
 
 g) Type:
 
-cd C:\deps\qttools-opensource-src-5.2.0
+	cd C:\deps\qttools-opensource-src-5.2.0
 
-qmake qttools.pro
+	qmake qttools.pro
 
-mingw32-make
+	mingw32-make
+
