@@ -108,6 +108,7 @@ c) In this section, download all of the files to the C:\deps folder.
 2.1 Download OpenSSL: http://www.openssl.org/source/openssl-1.0.1e.tar.gz
 
 a) From a MinGw shell (that window we opened), unpack the source archive with tar (this will avoid symlink issues) then configure and make (one command per line):
+
 			cd /c/deps/
 
 			tar xvfz openssl-1.0.1e.tar.gz
